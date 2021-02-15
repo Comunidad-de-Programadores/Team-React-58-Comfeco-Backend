@@ -1,26 +1,36 @@
-import { admin } from 'core/models'
 import mongo from 'core/mongo'
-import { sign } from 'core/security'
+import { user } from 'core/models'
+import security from 'core/security'
 
 const login = async (request, response) => {
   await mongo.connect()
+  const { body } = request
 
-  const { email, password } = request.body
-  const data = await admin.findOne({ password, email }).lean()
-  await mongo.disconnect()
-
-  if (!data) return response.error({ errorMessage: 'email or password was wrong' })
-
-  const responseObject = {
-    name: data.name,
-    lastname: data.lastname,
-    email: data.email,
-    id: data._id
+  // login with email
+  const resultWithEmail = await user.findOne({ email: body.usernameoremail, password: body.password }).lean()
+  if (resultWithEmail) {
+    delete resultWithEmail.password
+    delete resultWithEmail.__v
+    return response.success({
+      ...resultWithEmail,
+      token: security.sign(resultWithEmail)
+    })
   }
 
-  const token = sign(responseObject)
+  // login with username
+  const resultWitUserName = await user.findOne({ username: body.usernameoremail, password: body.password }).lean()
+  if (resultWitUserName) {
+    delete resultWitUserName.password
+    delete resultWitUserName.__v
+    return response.success({
+      ...resultWitUserName,
+      token: security.sign(resultWitUserName)
+    })
+  }
 
-  response.success({ user: { ...responseObject, token } })
+  await mongo.disconnect()
+
+  response.error({ errorMessage: 'credenciales incorrectos' })
 }
 
 export default login

@@ -45,6 +45,7 @@ const register = async (request, response) => {
   const userCreated = await user.findById(_id).lean()
   delete userCreated.password
   delete userCreated.__v
+  await mongo.disconnect()
 
   response.success({
     ...userCreated,
