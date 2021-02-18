@@ -1,6 +1,7 @@
 node_modules
 build/
 api
+source/secret.js
 firebaseCredential.json
 
 
