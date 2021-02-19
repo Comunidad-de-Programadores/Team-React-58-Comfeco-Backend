@@ -33,6 +33,7 @@ const config = {
   resolve: {
     extensions: ['.json', '.js'],
     alias: {
+      source: path.resolve(__dirname, './source'),
       helpers: path.resolve(__dirname, './source/helpers'),
       core: path.resolve(__dirname, './source/core'),
       middlewares: path.resolve(__dirname, './source/middlewares')

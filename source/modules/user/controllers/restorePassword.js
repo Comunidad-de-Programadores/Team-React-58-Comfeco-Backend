@@ -1,6 +1,6 @@
 import { user } from '../../../core/models'
 import { sign } from '../../../core/security'
-import { send } from '../../../core/email'
+import sendEmailForRestorePassword from '../../../core/sendEmailForRestorePassword'
 import mongo from 'core/mongo'
 
 const restorePassword = async (request, response) => {
@@ -15,7 +15,7 @@ const restorePassword = async (request, response) => {
   }
   await mongo.disconnect()
   const token = sign({ email })
-  await send(email, token)
+  await sendEmailForRestorePassword(email, token)
 
   response.success()
 }
