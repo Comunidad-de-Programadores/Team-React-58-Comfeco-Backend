@@ -26,7 +26,7 @@ const AddCominity = async (request, response) => {
     // set idCommunity into user
     const composedCommunities = [...communities, communityId]
     await user.updateOne({ _id: userId }, { communities: composedCommunities })
-    response.success({
+    return response.success({
       message: 'User added to the community'
     })
   } catch (error) {
