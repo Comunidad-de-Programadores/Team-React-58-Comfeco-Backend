@@ -6,6 +6,7 @@ import cors from 'cors'
 
 // modules
 import user from './modules/user'
+import community from './modules/community'
 
 const router = Router()
 
@@ -18,6 +19,7 @@ router.use(TokenExtract())
 
 // define modules
 router.use('/user', user)
+router.use('/community', community)
 
 // 404 error handler
 router.use((request, response) => {
