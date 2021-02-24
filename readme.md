@@ -2,6 +2,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ## COMUNIDAD
 
+**`HOST` https://fest-api.vercel.app/**  
+
  **Obtener lista de comunidades**  
 `GET` /community  
 *objeto de respuesta:*  
