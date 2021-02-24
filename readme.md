@@ -2,9 +2,9 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ## COMUNIDAD
 
- **Obtener lista de comunidades** 
+ **Obtener lista de comunidades**  
 `GET` /community  
-*objeto de respuesta:*
+*objeto de respuesta:*  
 ```
   {
     "status": "success",
@@ -16,17 +16,17 @@
   }
 ```
 
-## USUARIO
-**Agregar usuario a una comunidad**
+## USUARIO  
+**Agregar usuario a una comunidad**  
 `POST` /user/community  
 `token requerido`  
-*objeto de solicitud*
+*objeto de solicitud*  
  ```
  {
 	"communityId": "someCommunityId"	 
  }
  ```
- *objeto de respuesta*
+ *objeto de respuesta*  
   ```
  // En caso de operacion exitosa
 {
@@ -41,16 +41,16 @@
 }
  ```
 
-**Eliminar usuario a una comunidad**
-`DELETE` /user/community 
-`token requerido`
-*objeto de solicitud*
+**Eliminar usuario a una comunidad**  
+`DELETE` /user/community   
+`token requerido`  
+*objeto de solicitud*  
  ```
  {
 	"communityId": "someCommunityId"	 
  }
  ```
- *objeto de respuesta*
+ *objeto de respuesta*  
   ```
  // En caso de operacion exitosa
 {
