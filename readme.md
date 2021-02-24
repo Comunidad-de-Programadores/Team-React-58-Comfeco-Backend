@@ -3,7 +3,7 @@
 ## COMUNIDAD
 
  **Obtener lista de comunidades** 
-`GET` /community
+`GET` /community  
 *objeto de respuesta:*
 ```
   {
@@ -18,8 +18,8 @@
 
 ## USUARIO
 **Agregar usuario a una comunidad**
-`POST` /user/community 
-`token requerido`
+`POST` /user/community  
+`token requerido`  
 *objeto de solicitud*
  ```
  {
