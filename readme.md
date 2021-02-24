@@ -6,14 +6,14 @@
 `GET` /community
 *objeto de respuesta:*
 ```
-	{
-		"status": "success",
-		"communities": [
-			{...communityData},
-			{...communityData},
-			{...communityData}
-		]"
-	}
+  {
+    "status": "success",
+    "communities": [
+	{...communityData},
+	{...communityData},
+	{...communityData}
+    ]"
+  }
 ```
 
 ## USUARIO
