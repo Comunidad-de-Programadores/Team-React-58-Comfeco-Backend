@@ -6,6 +6,7 @@ import login from './controllers/login'
 import register from './controllers/register'
 import removeCommunity from './controllers/removeCommunity'
 import restorePassword from './controllers/restorePassword'
+import updateProfile from './controllers/updateProfile'
 
 const user = new Router()
 
@@ -15,5 +16,6 @@ user.post('/restorepassword', restorePassword)
 user.post('/confirmrestorepassword', confirmRestorePassword)
 user.post('/community', authentication, AddCominity)
 user.delete('/community', authentication, removeCommunity)
+user.patch('/', authentication, updateProfile)
 
 export default user
