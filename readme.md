@@ -74,7 +74,7 @@
 *objeto de solicitud*  
  ```
  {
-	username: <strng>,
+    	username: <strng>,
     	fullname: <strng>,
     	email: <strng>,
     	gender: <strng>,
