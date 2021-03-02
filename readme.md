@@ -78,7 +78,7 @@
     	fullname: <strng>,
     	email: <strng>,
     	gender: <strng>,
-    	birthdate: <strng>,
+    	birthdate: <Date>,
     	country: <strng>,
     	password: <strng>,
     	confirmPassword: <strng>,
