@@ -66,3 +66,39 @@
 	"errorMessage": "description of error here"
 }
  ```
+ 
+ 
+ **Actualizar datos de perfil**  
+`PATCH` /user   
+`token requerido`  
+*objeto de solicitud*  
+ ```
+ {
+	username: <strng>,
+    	fullname: <strng>,
+    	email: <strng>,
+    	gender: <strng>,
+    	birthdate: <strng>,
+    	country: <strng>,
+    	password: <strng>,
+    	confirmPassword: <strng>,
+    	github: <strng>,
+    	facebook: <strng>,
+    	linkedin: <strng>,
+    	twitter: <strng>,
+    	biography: <strng>	 
+ }
+ ```
+ *objeto de respuesta*  
+  ```
+ // En caso de operacion exitosa
+{
+	"status": "success",
+}
+
+// En caso de error
+{
+	"status": "error",
+	"errorMessage": "description of error here"
+}
+ ```
