@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
-import mongo from '../../../../core/mongo'
-import forEachObject from '../../../../helpers/forEachObject'
+import mongo from '../../../core/mongo'
+import forEachObject from '../../../helpers/forEachObject'
 import { user } from 'core/models'
 
 const updateProfile = async (request, response) => {
@@ -15,12 +15,15 @@ const updateProfile = async (request, response) => {
     birthdate: request.body.birthdate,
     country: request.body.country,
     password: request.body.password,
-    confirmPassword: request.body.confirmPassword,
     github: request.body.github,
     facebook: request.body.facebook,
     linkedin: request.body.linkedin,
     twitter: request.body.twitter,
     biography: request.biography
+  }
+
+  if (secureData.birthdate) {
+    secureData.birthdate = new Date(secureData.birthdate)
   }
 
   // delete empties
