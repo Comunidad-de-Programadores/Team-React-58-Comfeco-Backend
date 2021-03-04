@@ -11,10 +11,12 @@ const login = async (request, response) => {
   if (resultWithEmail) {
     delete resultWithEmail.password
     delete resultWithEmail.__v
-    return response.success({
+    const dataToSend = {
       ...resultWithEmail,
       token: security.sign(resultWithEmail)
-    })
+    }
+    // response.cookie('session', dataToSend, { maxAge: 24 * 60 * 60 * 7 })
+    return response.success(dataToSend)
   }
 
   // login with username
@@ -22,14 +24,15 @@ const login = async (request, response) => {
   if (resultWitUserName) {
     delete resultWitUserName.password
     delete resultWitUserName.__v
-    return response.success({
+    const dataToSend = {
       ...resultWitUserName,
       token: security.sign(resultWitUserName)
-    })
+    }
+    // response.cookie('session', dataToSend, { maxAge: 24 * 60 * 60 * 7 })
+    return response.success(dataToSend)
   }
 
   await mongo.disconnect()
-
   response.error({ errorMessage: 'credenciales incorrectos' })
 }
 
