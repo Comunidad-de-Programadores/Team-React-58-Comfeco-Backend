@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import authentication from '../../middlewares/authentication'
+import activities from './controllers/activity'
 import AddCominity from './controllers/addCommunity'
 import confirmRestorePassword from './controllers/confirmRestorePassword'
 import getUserInfo from './controllers/getUserInfo'
@@ -12,6 +13,7 @@ import updateProfile from './controllers/updateProfile'
 const user = new Router()
 
 user.post('/login', login)
+user.get('/activity', authentication, activities)
 user.post('/register', register)
 user.post('/restorepassword', restorePassword)
 user.post('/confirmrestorepassword', confirmRestorePassword)
