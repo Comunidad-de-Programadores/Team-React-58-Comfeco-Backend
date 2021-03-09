@@ -9,6 +9,7 @@ import user from './modules/user'
 import community from './modules/community'
 import groups from './modules/group'
 import events from './modules/events'
+import badges from './modules/badges'
 
 const router = Router()
 
@@ -24,6 +25,7 @@ router.use('/user', user)
 router.use('/community', community)
 router.use('/group', groups)
 router.use('/event', events)
+router.use('/badge', badges)
 
 // 404 error handler
 router.use((request, response) => {
