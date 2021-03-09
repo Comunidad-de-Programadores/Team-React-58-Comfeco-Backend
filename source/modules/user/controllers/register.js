@@ -1,5 +1,5 @@
 import mongo from 'core/mongo'
-import { user } from 'core/models'
+import { activity, user } from 'core/models'
 import security from 'core/security'
 
 import { getEmailError, getFullNameError, getPasswordError, getUserNameError } from 'helpers/validators'
@@ -45,6 +45,14 @@ const register = async (request, response) => {
   const userCreated = await user.findById(_id).lean()
   delete userCreated.password
   delete userCreated.__v
+
+  // set activity
+  await activity.create({
+    userId: _id,
+    date: new Date(),
+    message: 'Te registraste a esta pagina, Bienvenido!!'
+  })
+
   await mongo.disconnect()
 
   response.success({

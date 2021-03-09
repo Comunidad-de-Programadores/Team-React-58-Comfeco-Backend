@@ -1,5 +1,5 @@
 import mongo from 'core/mongo'
-import { user } from 'core/models'
+import { activity, user } from 'core/models'
 import security from 'core/security'
 
 const login = async (request, response) => {
@@ -15,7 +15,11 @@ const login = async (request, response) => {
       ...resultWithEmail,
       token: security.sign(resultWithEmail)
     }
-    // response.cookie('session', dataToSend, { maxAge: 24 * 60 * 60 * 7 })
+    activity.create({
+      userId: resultWithEmail._id,
+      date: new Date(),
+      message: 'iniciaste sesión'
+    })
     return response.success(dataToSend)
   }
 
@@ -28,7 +32,11 @@ const login = async (request, response) => {
       ...resultWitUserName,
       token: security.sign(resultWitUserName)
     }
-    // response.cookie('session', dataToSend, { maxAge: 24 * 60 * 60 * 7 })
+    activity.create({
+      userId: resultWitUserName._id,
+      date: new Date(),
+      message: 'iniciaste sesión'
+    })
     return response.success(dataToSend)
   }
 
