@@ -1,5 +1,5 @@
-import mongo from '../../../../core/mongo'
-import { activity } from '../../../../core/models'
+import mongo from '../../../core/mongo'
+import { activity } from '../../../core/models'
 
 const activities = async (request, response) => {
   await mongo.connect()

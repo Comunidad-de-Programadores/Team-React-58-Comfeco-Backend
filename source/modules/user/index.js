@@ -9,11 +9,13 @@ import register from './controllers/register'
 import removeCommunity from './controllers/removeCommunity'
 import restorePassword from './controllers/restorePassword'
 import updateProfile from './controllers/updateProfile'
+import badges from './controllers/badges'
 
 const user = new Router()
 
 user.post('/login', login)
 user.get('/activity', authentication, activities)
+user.get('/badge', authentication, badges)
 user.post('/register', register)
 user.post('/restorepassword', restorePassword)
 user.post('/confirmrestorepassword', confirmRestorePassword)
