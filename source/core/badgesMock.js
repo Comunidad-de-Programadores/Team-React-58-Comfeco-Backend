@@ -1,4 +1,4 @@
-const badges = [
+const badgesMock = [
   {
     id: '1',
     image: 'https://cdn5.vectorstock.com/i/1000x1000/25/14/sociable-vector-17712514.jpg',
@@ -29,4 +29,4 @@ const badges = [
   }
 ]
 
-export default badges
+export default badgesMock

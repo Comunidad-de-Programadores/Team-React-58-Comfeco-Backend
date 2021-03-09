@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 
 import mongo from '../../../core/mongo'
-import { community, user } from 'core/models'
+import { community, user, activity } from 'core/models'
 
 const AddCominity = async (request, response) => {
   try {
@@ -26,6 +27,14 @@ const AddCominity = async (request, response) => {
     // set idCommunity into user
     const composedCommunities = [...communities, communityId]
     await user.updateOne({ _id: userId }, { communities: composedCommunities })
+
+    // set activity
+    activity.create({
+      date: new Date(),
+      message: `Te uniste a la comunidada "${communityExist.name}"`,
+      userId
+    })
+
     return response.success({
       message: 'User added to the community'
     })

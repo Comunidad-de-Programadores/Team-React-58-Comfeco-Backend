@@ -1,7 +1,8 @@
 /* eslint-disable eqeqeq */
 import mongo from '../../../core/mongo'
 import forEachObject from '../../../helpers/forEachObject'
-import { user } from 'core/models'
+import { activity, user, badge } from 'core/models'
+import badgesMock from '../../../core/badgesMock'
 
 const updateProfile = async (request, response) => {
   const { _id, email } = request.session
@@ -42,7 +43,30 @@ const updateProfile = async (request, response) => {
     if (userByEmail && userByEmail._id != _id) return response.error({ errorMessage: 'the email is already registered' })
   }
 
+  // update profile
   await user.updateOne({ email }, secureData)
+
+  // set at activity
+  await activity.create({
+    userId: _id,
+    date: new Date(),
+    message: 'Actualizaste los datos de tu perfil'
+  })
+
+  // set badge if not exist
+  const currentBadges = await badge.find({ userId: _id }).lean()
+  if (!currentBadges.some(badge => badge.name === 'Sociable')) {
+    console.log('setting socieble badge')
+    await badge.create({
+      userId: _id,
+      ...badgesMock.find(badge => badge.name === 'Sociable')
+    })
+    await activity.create({
+      userId: _id,
+      date: new Date(),
+      message: 'Obtuviste insignia sociable'
+    })
+  }
   response.success()
 }
 
