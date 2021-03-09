@@ -19,7 +19,7 @@ const updateProfile = async (request, response) => {
     facebook: request.body.facebook,
     linkedin: request.body.linkedin,
     twitter: request.body.twitter,
-    biography: request.biography
+    biography: request.body.biography
   }
 
   if (secureData.birthdate) {
