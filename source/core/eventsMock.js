@@ -10,7 +10,7 @@ const events = [
     name: 'WordCamp',
     description: 'WordCamp es el evento por excelencia del mundo WordPress. Se celebra en muchas ciudades del mundo. En España, entre otras, en Madrid y Barcelona a lo largo del año. Para el de Barna todavía quedan unos cuantos meses y poco se sabe pero el de Madrid está a la vuelta de la esquina y la organización quiere que elijas tu las ponencias entre todas las que se han postulado.',
     id: '2',
-    image: 'https://i.blogs.es/383554/wordcamp/1366_2000.jpg',
+    image: 'https://i0.wp.com/guayaquil.wordcamp.org/2019/files/2019/10/%C2%BFQue%CC%81-es-una-wordcamp.jpg?resize=950%2C497&ssl=1',
     date: new Date('2021/06/01')
   },
   {

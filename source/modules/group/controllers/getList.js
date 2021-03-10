@@ -6,7 +6,7 @@ const getList = async (request, response) => {
   const groupsList = [
     {
       name: 'Desarrollo frontEnd',
-      tags: 'javascript',
+      tag: 'javascript',
       description: 'Todo lo que necesitas saber sobre desarrollo frontEnd',
       image: 'https://www.qualitydevs.com/wp-content/uploads/2018/12/desarrollador-frontend.jpg'
     },
