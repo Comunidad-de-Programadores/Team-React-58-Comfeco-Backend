@@ -29,7 +29,7 @@
  }
  ```
  *objeto de respuesta*  
-  ```
+ ```
  // En caso de operacion exitosa
 {
 	"status": "success",
