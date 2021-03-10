@@ -1,9 +1,9 @@
 # Team-React-58
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-## COMUNIDAD
 
 **`HOST` https://fest-api.vercel.app/**  
 
+## COMUNIDAD  
  **Obtener lista de comunidades**  
 `GET` /community  
 *objeto de respuesta:*  
@@ -42,9 +42,9 @@
 	"errorMessage": "description of error here"
 }
  ```
-
-**Eliminar usuario a una comunidad**  
-`DELETE` /user/community   
+ 
+ **Agregar usuario a una comunidad**  
+`POST` /user/community  
 `token requerido`  
 *objeto de solicitud*  
  ```
@@ -57,7 +57,7 @@
  // En caso de operacion exitosa
 {
 	"status": "success",
-	"message": "user removed from community"
+	"message": "User added to the community"
 }
 
 // En caso de error
@@ -66,6 +66,23 @@
 	"errorMessage": "description of error here"
 }
  ```
+
+**obtener lista de mis actividades**  
+devuelve una lista de las ultimas cinco actividades
+`get` /user/activity   
+`token requerido`  
+
+ *objeto de respuesta*  
+  ```
+{
+	"status": "success",
+	"activities": [
+		{
+			date: <TimeStamp>
+			message: <string>
+		}
+	]
+}
  
  
  **Actualizar datos de perfil**  
