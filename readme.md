@@ -73,7 +73,7 @@ devuelve una lista de las ultimas cinco actividades
 `token requerido`  
 
  *objeto de respuesta*  
-  ```
+  ```json
 {
   "status": "success",
   "activities": [
@@ -85,6 +85,7 @@ devuelve una lista de las ultimas cinco actividades
     {...}
   ]
 }
+````
  
  
  **Actualizar datos de perfil**  
