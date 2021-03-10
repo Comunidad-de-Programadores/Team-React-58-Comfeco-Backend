@@ -17,7 +17,7 @@ const events = [
     name: 'Codemotion',
     description: 'La nueva edición del evento de desarrollo más multitudinario que se celebra en suelo español de forma anual, Codemotion Madrid. Imaginamos que el sitio elegido sería de nuevo el Campus de Montepríncipe de la Universidad CEU San Pablo. Sea como fuere, cita ineludible.',
     id: '3',
-    image: '',
+    image: 'https://www.v-app.io/wp-content/uploads/2019/10/codemotion-vapp-1024x675.jpg',
     date: new Date('2021/07/01')
   },
   {
