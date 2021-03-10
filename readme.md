@@ -68,20 +68,22 @@
  ```
 
 **obtener lista de mis actividades**  
-devuelve una lista de las ultimas cinco actividades
+devuelve una lista de las ultimas cinco actividades  
 `get` /user/activity   
 `token requerido`  
 
  *objeto de respuesta*  
   ```
 {
-	"status": "success",
-	"activities": [
-		{
-			date: <TimeStamp>
-			message: <string>
-		}
-	]
+  "status": "success",
+  "activities": [
+    {
+      date: <TimeStamp>
+      message: <string>
+    },
+    {...},
+    {...}
+  ]
 }
  
  
