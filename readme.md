@@ -43,21 +43,21 @@
 }
  ```
  
- **Agregar usuario a una comunidad**  
-`POST` /user/community  
-`token requerido`  
-*objeto de solicitud*  
- ```
- {
-	"communityId": "someCommunityId"	 
- }
- ```
+ **Eliminar usuario en una comunidad **  
+  `delete` /user/community  
+  `token requerido`  
+  *objeto de solicitud*  
+   ```
+   {
+       "communityId": "someCommunityId"	 
+   }
+   ```
  *objeto de respuesta*  
   ```
  // En caso de operacion exitosa
 {
 	"status": "success",
-	"message": "User added to the community"
+	"message": <string>
 }
 
 // En caso de error
@@ -164,7 +164,7 @@ devuelve una lista de las ultimas cinco actividades
 }
 ````
 
- ### Grupos   
+ ### badges   
  **obtener lista de insignias**   
 `get` /badge
 
