@@ -3,7 +3,7 @@ const events = [
     name: 'WeCodeFest',
     description: 'Evento organizado por la gente de Cylicon Valley en la Escuela de Ingeniería Informática de Pucela que mezcla talleres, katas y charlas de temáticas variadas y una selección de ponentes muy interesante y con paridad entre hombres y mujeres.',
     id: '1',
-    image: 'https://i.blogs.es/200319/wecode/1366_2000.jpg',
+    image: 'https://cdn.dribbble.com/users/201816/screenshots/6076307/wecode.png',
     date: new Date('2021/05/01')
   },
   {

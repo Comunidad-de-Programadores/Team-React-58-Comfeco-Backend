@@ -10,6 +10,9 @@ import removeCommunity from './controllers/removeCommunity'
 import restorePassword from './controllers/restorePassword'
 import updateProfile from './controllers/updateProfile'
 import badges from './controllers/badges'
+import addEvent from './controllers/addEvent'
+import removeEvent from './controllers/removeEvent'
+import getEvents from './controllers/getEvents'
 
 const user = new Router()
 
@@ -23,5 +26,7 @@ user.post('/community', authentication, AddCominity)
 user.delete('/community', authentication, removeCommunity)
 user.patch('/', authentication, updateProfile)
 user.get('/', authentication, getUserInfo)
-
+user.post('/event', authentication, addEvent)
+user.delete('/event', authentication, removeEvent)
+user.get('/event', authentication, getEvents)
 export default user

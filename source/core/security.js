@@ -14,6 +14,10 @@ export function verify (accessToken) {
   })
 }
 
+/**
+ * encode data into token
+ * @param {{}} data data to encode
+ */
 export function sign (data) {
   const accessToken = jsonwebtoken.sign(data, jwt.secret)
   return accessToken
