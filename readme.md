@@ -73,7 +73,7 @@ devuelve una lista de las ultimas cinco actividades
 `token requerido`  
 
  *objeto de respuesta*  
-  ```json
+  ```
 {
   "status": "success",
   "activities": [
@@ -83,6 +83,26 @@ devuelve una lista de las ultimas cinco actividades
     },
     {...},
     {...}
+  ]
+}
+````
+
+**obtener lista de mis insignias**   
+`get` /user/badge
+`token requerido`  
+
+ *objeto de respuesta*  
+  ```
+{
+  "status": "success",
+  "badges": [
+    {
+      id: <string>,
+      image: <string>,  
+      name: <string>,  
+      howToGetIt: <string>,  
+      description: <string>  
+    }
   ]
 }
 ````
@@ -122,3 +142,24 @@ devuelve una lista de las ultimas cinco actividades
 	"errorMessage": "description of error here"
 }
  ```
+ 
+ ### Grupos   
+ **obtener lista de grupos**   
+`get` /group
+
+ *objeto de respuesta*  
+  ```
+{
+  "status": "success",
+  "groups": [
+    {
+     "name": <string>,
+     "tags": <string>,
+     "description": <string>,
+     "image": <string>
+    },
+    {...},
+    {...}
+  ]
+}
+````
