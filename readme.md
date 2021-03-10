@@ -163,3 +163,25 @@ devuelve una lista de las ultimas cinco actividades
   ]
 }
 ````
+
+ ### Grupos   
+ **obtener lista de insignias**   
+`get` /badge
+
+ *objeto de respuesta*  
+  ```
+{
+  "status": "success",
+  "badges": [
+    {
+      id: <string>,
+      image: <string>,
+      name: <string>,
+      howToGetIt: <string>,
+      description: <string>
+      },
+      {...},
+      {...}
+   ]
+}
+````
