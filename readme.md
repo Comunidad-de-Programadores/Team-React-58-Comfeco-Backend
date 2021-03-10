@@ -23,7 +23,7 @@
 `POST` /user/community  
 `token requerido`  
 *objeto de solicitud*  
- ```
+```
  {
 	"communityId": "someCommunityId"	 
  }
@@ -41,10 +41,10 @@
 	"status": "error",
 	"errorMessage": "description of error here"
 }
- ```
+```
  
  **Eliminar usuario en una comunidad **  
-  `delete` /user/community  
+  `delete` /user/community   
   `token requerido`  
   *objeto de solicitud*  
    ```
@@ -69,7 +69,7 @@
 
 **obtener lista de mis actividades**  
 devuelve una lista de las ultimas cinco actividades  
-`get` /user/activity   
+`get` /user/activity    
 `token requerido`  
 
  *objeto de respuesta*  
@@ -88,7 +88,7 @@ devuelve una lista de las ultimas cinco actividades
 ````
 
 **obtener lista de mis insignias**   
-`get` /user/badge
+`get` /user/badge  
 `token requerido`  
 
  *objeto de respuesta*  
