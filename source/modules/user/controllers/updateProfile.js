@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
 import mongo from '../../../core/mongo'
-import forEachObject from '../../../helpers/forEachObject'
+// import forEachObject from '../../../helpers/forEachObject'
 import { activity, user, badge } from 'core/models'
 import badgesMock from '../../../core/badgesMock'
 
@@ -20,7 +20,8 @@ const updateProfile = async (request, response) => {
     facebook: request.body.facebook,
     linkedin: request.body.linkedin,
     twitter: request.body.twitter,
-    biography: request.body.biography
+    biography: request.body.biography,
+    knowledgeArea: request.body.knowledgeArea
   }
 
   if (secureData.birthdate) {
@@ -28,9 +29,9 @@ const updateProfile = async (request, response) => {
   }
 
   // delete empties
-  forEachObject(secureData, (value, key) => {
-    if (!value) delete secureData[key]
-  })
+  // forEachObject(secureData, (value, key) => {
+  //   if (!value) delete secureData[key]
+  // })
 
   // verify is user is available
   if (secureData.username) {

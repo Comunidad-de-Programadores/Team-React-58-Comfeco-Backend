@@ -13,7 +13,8 @@ const getUserInfo = async (request, response) => {
     delete resultWithEmail.__v
     return response.success({
       ...resultWithEmail,
-      token: security.sign(resultWithEmail)
+      token: security.sign(resultWithEmail),
+      group: '2'
     })
   }
 

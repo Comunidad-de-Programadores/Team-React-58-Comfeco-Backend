@@ -5,72 +5,91 @@ const getList = async (request, response) => {
 
   const groupsList = [
     {
+      id: '1',
       name: 'Desarrollo frontEnd',
       tag: 'javascript',
       description: 'Todo lo que necesitas saber sobre desarrollo frontEnd',
       image: 'https://www.qualitydevs.com/wp-content/uploads/2018/12/desarrollador-frontend.jpg'
     },
     {
+      id: '2',
+      name: 'Team react 58',
+      tag: 'javascript',
+      description: 'El mejor team de React',
+      image: 'https://www.digifutura.com/wp-content/uploads/2019/10/react-technologies-img.png'
+    },
+    {
+      id: '3',
       name: 'ElectronJs',
       tag: 'javascript',
       description: 'Desarrollo de aplicaciones multiplataforma con ElectronJs',
       image: 'https://elvento.com/wp-content/uploads/2020/01/electron-development.png'
     },
     {
+      id: '4',
       name: 'Webpack',
       tag: 'javascript',
       description: 'Grupo de ayuda, dudas, tutoriales, todo sobre webpack',
       image: 'http://static1.squarespace.com/static/5af4ad515cfd79b209ac7864/5c4063338a4134f6af98f020/5f7b64ccc0d1d43ac92e88a8/1603139157815/Cover-Image-Top-3-Webpack-Tips_3x5.png?format=1500w'
     },
     {
+      id: '5',
       name: 'ReactJs',
       tag: 'javascript',
       description: 'grupo para la mejor libreria para desarrollo de interfaces de usuario ReactJs',
       image: 'https://miro.medium.com/max/3840/0*oZLL-N4dGNlBe4Oh.png'
     },
     {
+      id: '6',
       name: 'Machine Learning',
       tag: 'phyton',
       description: 'Aquí para compartir charlas, tutoriales, cursos, libros, trabajos ... relacionados con Machine Learning',
       image: 'https://blog.bismart.com/hubfs/20190903-MachineLearning.jpg'
     },
     {
+      id: '7',
       name: 'Redes Neuronales',
       tag: 'phyton',
       description: 'Todo sobre redes neuronales e inteligencia artificial',
       image: 'https://www.iartificial.net/wp-content/uploads/2019/02/IA.jpg'
     },
     {
+      id: '8',
       name: 'Python en español',
       tag: 'phyton',
       description: 'Bienvenidos sean todos a este grupo donde se ayudará en especial a los que van iniciando en la programación con python.',
       image: 'https://i.blogs.es/62f583/python/450_1000.jpg'
     },
     {
+      id: '9',
       name: 'Ciencia de Datos con Python',
       tag: 'phyton',
       description: 'La finalidad del grupo es compartir información, conocimientos y experiencias respecto a la “Ciencia de Datos (también el fundamento teórico) con Python',
       image: 'https://i0.wp.com/blog.auriboxtraining.com/wp-content/uploads/2017/03/code-1084923_1280.png?resize=823%2C400&ssl=1'
     },
     {
+      id: '10',
       name: 'Desarrolladores web',
       tag: 'html',
       description: 'Grupo para los amantes del desarrollo web',
       image: 'https://tactic-center.com/wp-content/uploads/2017/08/10-complementos-de-Firefox-esenciales-para-desarrolladores-web.jpg'
     },
     {
+      id: '11',
       name: 'Laravel en español',
       tag: 'php',
       description: 'Todo sobre laravel, dudas, utoriales, guias y mas...',
       image: 'https://diegovolpe.com/wp-content/uploads/2020/07/laravel-covercover-1140x640-1.jpg'
     },
     {
+      id: '12',
       name: 'Trucazos PHP',
       tag: 'php',
       description: 'Grupo de Desarrollo PHP donde compartimos recursos, scripts, consejos y trucazos sobre programación.',
       image: 'https://blog.tednologia.com/wp-content/uploads/2020/03/php-2.png'
     },
     {
+      id: '13',
       name: 'Progressive web applications',
       tag: 'javascript',
       description: 'Grupo de ayuda sobre progressive web applications',

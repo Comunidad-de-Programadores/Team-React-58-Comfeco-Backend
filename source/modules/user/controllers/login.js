@@ -13,7 +13,8 @@ const login = async (request, response) => {
     delete resultWithEmail.__v
     const dataToSend = {
       ...resultWithEmail,
-      token: security.sign(resultWithEmail)
+      token: security.sign(resultWithEmail),
+      group: '2'
     }
     activity.create({
       userId: resultWithEmail._id,
@@ -30,7 +31,8 @@ const login = async (request, response) => {
     delete resultWitUserName.__v
     const dataToSend = {
       ...resultWitUserName,
-      token: security.sign(resultWitUserName)
+      token: security.sign(resultWitUserName),
+      group: '2'
     }
     activity.create({
       userId: resultWitUserName._id,

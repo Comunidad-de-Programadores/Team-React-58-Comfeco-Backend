@@ -7,7 +7,12 @@ const activities = async (request, response) => {
   const activitiesList = await activity.find({ userId: request.session._id }).sort({ date: -1 }).limit(5).lean()
 
   // const activitiesList = activity.find({  })
-  response.success({ activities: activitiesList })
+  response.success({
+    activities: activitiesList.map(a => {
+      a.date = new Date(a.date).toLocaleDateString()
+      return a
+    })
+  })
 }
 
 export default activities
