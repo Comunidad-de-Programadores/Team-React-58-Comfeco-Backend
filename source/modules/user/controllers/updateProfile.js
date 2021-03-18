@@ -28,10 +28,10 @@ const updateProfile = async (request, response) => {
     secureData.birthdate = new Date(secureData.birthdate)
   }
 
-  // delete empties
-  // forEachObject(secureData, (value, key) => {
-  //   if (!value) delete secureData[key]
-  // })
+  if (!secureData.password) delete secureData.password
+  if (!secureData.username) delete secureData.username
+  if (!secureData.fullname) delete secureData.fullname
+  if (!secureData.email) delete secureData.email
 
   // verify is user is available
   if (secureData.username) {
